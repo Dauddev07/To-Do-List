@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart To-Do</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>✨ Smart To-Do</h1>
+
+      <button id="themeToggle" title="Switch between dark and light mode">
+        🌙 Toggle Theme
+      </button>
+
+      <form id="form">
+        <input id="input" placeholder="What needs to be done?" />
+        <button title="Add new task">Add</button>
+      </form>
+
+      <div class="filters">
+        <button data-filter="all" class="active" title="Show all tasks">
+          All
+        </button>
+        <button data-filter="remaining" title="Show remaining tasks">
+          Remaining
+        </button>
+        <button data-filter="completed" title="Show completed tasks">
+          Completed
+        </button>
+      </div>
+
+      <ul id="list"></ul>
+
+      <div class="stats" id="stats"></div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="editModal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Edit Task</h3>
+        <input type="text" id="editInput" />
+        <div class="modal-actions">
+          <button id="saveEdit">Save</button>
+          <button id="cancelEdit">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
